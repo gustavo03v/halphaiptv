@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprodutor IPTV</title>
+</head>
+<body>
+    <h1>Reprodutor IPTV</h1>
+    <video id="iptvPlayer" controls>
+        <!-- Insira o link da sua lista IPTV aqui -->
+        <source src="https://sua-lista-iptv.com/lista.m3u" type="application/x-mpegURL">
+        Seu navegador não suporta a reprodução de IPTV.
+    </video>
+
+    <script>
+        const iptvPlayer = document.getElementById('iptvPlayer');
+        iptvPlayer.addEventListener('error', () => {
+            console.error('Erro ao carregar a lista IPTV.');
+        });
+    </script>
+</body>
+</html>
